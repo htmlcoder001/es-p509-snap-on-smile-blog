@@ -99,99 +99,38 @@ a:visited,
         </style>
         
         <!-- Header -->
-        <style id="font-faces">
-            @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 400;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-regular-webfont.woff2") format("woff2");url("fonts/agaramondpro-regular-webfont.woff") format("woff");
-            }
-    
-            @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-bold-webfont.woff2") format("woff2");url("fonts/agaramondpro-bold-webfont.woff") format("woff");
-            }
-    
-            @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-semibold-webfont.woff2") format("woff2");url("fonts/agaramondpro-semibold-webfont.woff") format("woff");
-            }
-            
-            @font-face {
-                font-family: FBDidotS;
-                font-weight: 300;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/FBDidotS-Light.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-Bold.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-DemiBold.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 500;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-Medium.woff") format("woff");
-            }
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     
         <style>
             .webt-header {
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
             }
             .webt-header__top {
-                border-bottom: 1px solid rgb(224, 224, 224);
                 width: 100%;
-                height: 64px;
+                height: 60px;
                 position: relative;
-            }
-            .webt-top__wrapper {
-                padding: 16px;
                 display: flex;
                 justify-content: space-between;
-                margin: 0 auto;
-                width: 100%;
-                height: 100%;
+                align-items: center;
+                padding: 10px 20px;
             }
-            .webt-top__menu {
-                display: block;
-                text-decoration: none;
-                -webkit-transition: all .3s;
-                -moz-transition: all .3s;
-                -ms-transition: all .3s;
-                -o-transition: all .3s;
-                transition: all .3s;
-            }
-            .webt-top__menu:hover {
-                text-decoration: none;
-                opacity: 0.8;
-            }
+
             .webt-top__logo {
-                width: 128px;
-                height: 30px;
+                width: 180px;
+                
                 display: block;
+                
+            }
+            .webt-logo__img {
+                max-width: 100%;
+            }
+            .webt-top__nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 70px;
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -202,35 +141,96 @@ a:visited,
                 -o-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
             }
-            .webt-logo__img {
-                max-width: 100%;
+            .webt-top__link,
+            .webt-top__link:active,
+            .webt-top__link:focus {
+                color: #595959;
+                font-size: 15px;
+                font-family: 'Poppins'!important;
+                font-weight: 500;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                text-decoration: none;
+                white-space: nowrap;
             }
-            .webt-top__actions {
+            .webt-top__link:hover {
+                color: #009de0;
+            }
+            .webt-top__contacts {
+                display: flex;
+                flex-direction: column;
+            }
+            .webt-contacts__item,
+            .webt-contacts__item:active,
+            .webt-contacts__item:focus {
+                padding-left: 17px;
+                position: relative;
+                color: #153138;
+                font-family: 'Poppins'!important;
+                font-weight: 600;
+                font-size: 14px;
+                text-decoration: none;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                white-space: nowrap;
+            }
+            .webt-contacts__item:hover {
+                color: #009de0;
+            }
+            .webt-contacts__item:before {
+                content: '';
                 display: block;
-                height: 32px;
-                width: 200px;
-                background-image: url(images/header-actions.png);
-                background-position: center;
-                background-repeat: no-repeat;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 0;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
                 -webkit-background-size: contain;
                 background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
             }
+            .--contact-phone:before {
+                background-image: url(images/icon-phone-dark-blue.svg);
+            }
+            .--contact-mail:before {
+                background-image: url(images/icon-envelope-dark-blue.svg);
+            }
+
             .webt-header__bottom {
-            
+                height: 38px;
+                width: 100%;
+                background-color: #009de0;
             }
             .webt-bottom__nav {
-                max-width: 920px;
+                max-width: 960px;
                 margin: 0 auto;
-                height: 48px;
+                height: 38px;
     
-                display: flex;
+                display: grid;
                 align-items: stretch;
                 justify-content: center;
-                gap: 16px;
+                grid-template-columns: repeat(4, 1fr);
+    
+                position: relative;
             }
             .webt-nav__link,
             .webt-nav__link:focus,
             .webt-nav__link:active {
+                white-space: nowrap;
+                padding-left: 70px;
+                padding-right: 70px;
                 position: relative;
                 white-space: nowrap;
                 display: flex;
@@ -240,12 +240,11 @@ a:visited,
     
                 text-decoration: none;
     
-                color: #000;
+                color: #ffffff;
                 text-transform: uppercase;
-                font-family: VogueAvantGarde!important;
-                font-size: 13px;
+                font-family: 'Poppins'!important;
+                font-size: 15px;
                 font-weight: 600;
-                letter-spacing: 0.127811em;
     
                 -webkit-transition: all .3s;
                 -moz-transition: all .3s;
@@ -253,159 +252,153 @@ a:visited,
                 -o-transition: all .3s;
                 transition: all .3s;
             }
-            .--active:after {
-                content: '';
-                background-color: rgb(31, 31, 31);
-                bottom: 0;
-                height: 4px;
-                position: absolute;
-                width: 100%;
-            }
-            .webt-nav__link:hover {
-                color: #000;
+
+            .webt-nav__link:hover,
+            .webt-nav__link.--active-link {
+                color: #ffffff;
                 text-decoration: none;
-    
-                opacity: 0.8;
+                background-color: #0079ad;
+            }
+            .--link-search {
+                padding: 0;
+                position: absolute;
+                right: -44px;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+                width: 22px;
+                height: 22px;
+                background-image: url(images/icon-search-white.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                -webkit-background-size: contain;
+                background-size: contain;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+            }
+            .--link-search:hover {
+                background-color: transparent;
+                
+                filter: brightness(0);
             }
 
             .webt-subheader {
                 width: 100%;
                 margin-bottom: 48px;
             }
-            .webt-subheader__head {
-                width: 100%;
-                height: 215px;
+            .webt-subheader__breadcrumbs {
                 display: flex;
-                justify-content: center;
-                text-align: center;
+                justify-content: flex-start;
                 align-items: center;
-                flex-direction: column;
-                gap: 16px;
+                max-width: 1100px;
+                padding-bottom: 10px;
+                margin: 30px auto;
+                border-bottom: .1rem dotted #cccccc;
             }
-            .webt-head__title {
-                font-size: 64px;
-                font-family: FBDidotS!important;
-                letter-spacing: 0.0416667em;
-                font-weight: 300;
-                margin: 0 auto;
-                display: block;
-                color: rgb(0, 0, 0);
-            }
-            .webt-head__text {
-                text-align: center;
-                font-size: 17px;
-                font-family: GaramondPremierPro!important;
+            .webt-breadcrumbs__item {
+                font-family: 'Poppins'!important;
                 font-weight: 400;
-                margin: 0 auto;
+                color: #009de0;
+                font-size: 14px;
+                position: relative;
                 display: block;
-                color: rgb(0, 0, 0);
-                max-width: 850px;
+                text-decoration: none;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
             }
-            .webt-subheader__nav {
-                border-top: 1px solid rgb(224, 224, 224);
-                border-bottom: 1px solid rgb(224, 224, 224);
+            .webt-breadcrumbs__item:hover {
+                color: #595959;
             }
-            
-            @media (max-width: 960px) {
-                .webt-bottom__nav {
+            .webt-breadcrumbs__item:not(:last-child):after {
+                content: "\00BB";
+                color: #cccccc;
+                margin: 0 5px 0 3px;
+            }
+            .--active-breadcrumb {
+                color: #595959;
+                pointer-events: none;
+            }
+            .mobile-menu-toggle {
+                display: none;
+            }
+            .mobile-menu-toggle span {
+                height: 3px;
+                width: 25px;
+                background: #5d5d5d;
+            }
+
+            @media (max-width: 1180px) {
+                .webt-top__nav {
                     display: none;
                 }
-                .webt-header__top {
-                    border-bottom: none;
+                .webt-subheader__breadcrumbs {
+                    max-width: calc(100% - 24px);
+                    margin-top: 12px;
                 }
-                .webt-head__text {
-                    padding-right: 12px;
-                    padding-left: 12px;
-                }
-                .webt-head__title {
-                    font-size: 48px;
-                }
-                .webt-subheader__head {
-                    height: 180px;
-                }
-                .webt-subheader__nav .webt-bottom__nav {
-                    display: flex;
+            }
+            @media (max-width: 960px) {
+                .webt-header__bottom {
+                    display: none;
                 }
             }
             @media (max-width: 768px) {
-                .webt-top__actions {
-                    width: 32px;
-                    background-position: right;
-                    -webkit-background-size: cover;
-                    background-size: cover;
-                }
                 .webt-header__top {
                     height: 54px;
                 }
-                .webt-top__wrapper {
-                    padding: 12px;
+                .webt-top__contacts {
+                    display: none;
                 }
-                .webt-head__title {
-                    font-size: 32px;
-                }
-                .webt-subheader__head {
-                    height: auto;
-                    gap: 12px;
-                    padding: 24px 0;
-                }
-                .webt-head__text {
-                    font-size: 14px;
-                }
-                .webt-subheader__nav .webt-bottom__nav {
-                    flex-wrap: nowrap;
-                    white-space: nowrap;
-                    overflow-x: scroll;
-                    justify-content: flex-start;
-                    padding: 0 12px;
-                    height: 36px;
-                }
-                .webt-nav__link, .webt-nav__link:focus, .webt-nav__link:active {
-                    font-size: 12px;
+                .mobile-menu-toggle {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
                 }
             }
         </style>
         <header class="webt-header">
             <div class="webt-header__top">
-                <div class="webt-top__wrapper">
-                    <a href="#roulette" class="webt-top__menu">
-                        <svg class="ButtonIcon-iVrqPc hVlDJB button-icon icon icon-menu" focusable="false" viewBox="0 0 32 32" width="32" height="32" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M8 10h16v2H8v-2zm0 5h16v2H8v-2zm0 5h16v2H8v-2z" fill-rule="evenodd"></path></svg>
-                    </a>
-                    <a href="#roulette" class="webt-top__logo">
-                        <img src="images/logo.svg" alt="" class="webt-logo__img">
-                    </a>
-                    <a href="#roulette" class="webt-top__actions"></a>
+                <a href="#roulette" class="webt-top__logo">
+                    <img src="images/logo-blog.svg" alt="" class="webt-logo__img">
+                </a>
+                <nav class="webt-top__nav">
+                    <a href="#roulette" class="webt-top__link">Comprar Servicios Médicos</a>
+                    <a href="#roulette" class="webt-top__link">Cobertura Digital</a>
+                    <a href="#roulette" class="webt-top__link">Chat Médico</a>
+                    <a href="#roulette" class="webt-top__link">Video Consulta</a>
+                </nav>
+                <div class="webt-top__contacts">
+                    <a href="#roulette" class="webt-contacts__item --contact-phone">91 217 21 93</a>
+                    <a href="#roulette" class="webt-contacts__item --contact-mail">info@saludonnet.com</a>
                 </div>
+                <a href="#roulette" class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
             </div>
             <div class="webt-header__bottom">
                 <nav class="webt-bottom__nav">
-                    <a href="#roulette" class="webt-nav__link">MODA</a>
-                    <a href="#roulette" class="webt-nav__link">BELLEZA</a>
-                    <a href="#roulette" class="webt-nav__link">LIVING</a>
-                    <a href="#roulette" class="webt-nav__link">COMPRAS</a>
-                    <a href="#roulette" class="webt-nav__link">PASARELAS</a>
-                    <a href="#roulette" class="webt-nav__link">CELEBRITIES</a>
-                    <a href="#roulette" class="webt-nav__link">TV</a>
-                    <a href="#roulette" class="webt-nav__link">NOVIAS</a>
-                    <a href="#roulette" class="webt-nav__link">VOGUE 365</a>
-                    <a href="#roulette" class="webt-nav__link">BUSINESS</a>
-                    <a href="#roulette" class="webt-nav__link">VOGUE SHOP</a>
+                    <a href="#roulette" class="webt-nav__link --active-link">Todos los temas</a>
+                    <a href="#roulette" class="webt-nav__link">Nutrición</a>
+                    <a href="#roulette" class="webt-nav__link">Padres</a>
+                    <a href="#roulette" class="webt-nav__link">Estética</a>
+                    <a href="#roulette" class="webt-nav__link --link-search"></a>
                 </nav>
             </div>
         </header>
         <div class="webt-subheader">
-            <div class="webt-subheader__head">
-                <h2 class="webt-head__title">Belleza</h2>
-                <p class="webt-head__text">Te enseñamos los mejores consejos de belleza y las últimas tendencias en looks de esta temporada. Descubre los peinados más fashion y los consejos de belleza para estar a la última</p>
-            </div>
-            <div class="webt-subheader__nav">
-                <nav class="webt-bottom__nav">
-                    <a href="#roulette" class="webt-nav__link --active">TODOS LOS TEMAS</a>
-                    <a href="#roulette" class="webt-nav__link">PELO</a>
-                    <a href="#roulette" class="webt-nav__link">NUTRICION</a>
-                    <a href="#roulette" class="webt-nav__link">MAQUILLAJE</a>
-                    <a href="#roulette" class="webt-nav__link">FITNESS</a>
-                    <a href="#roulette" class="webt-nav__link">BIENESTAR</a>
-                </nav>
+            <div class="webt-subheader__breadcrumbs">
+                <a href="#roulette" class="webt-breadcrumbs__item">Blog</a>
+                <a href="#roulette" class="webt-breadcrumbs__item --active-breadcrumb">Odontología</a>
             </div>
         </div>
         <!-- // Header -->
